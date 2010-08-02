@@ -1,0 +1,28 @@
+<install>
+
+	<version>1.0</version>
+	<author>Mike Creighton</author>
+	<url>code.google.com/p/capturing-flow/</url>
+
+	<requires>
+	</requires>
+
+	<add>	
+		<src>
+			<folder name="addons/ofxFlowLib/src">			
+				<file>../../../addons/ofxFlowLib/src/ofxFlowData.h</file>
+				<file>../../../addons/ofxFlowLib/src/ofxFlowData.cpp</file>
+				<file>../../../addons/ofxFlowLib/src/ofxFlowPoint.h</file>
+			</folder>
+		</src>
+
+		<include>
+			<path>../../../addons/ofxFlowLib/src</path>
+		</include>
+		
+		<link>
+		</link>
+
+	</add>
+	
+</install>
