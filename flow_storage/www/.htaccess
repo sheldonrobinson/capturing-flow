@@ -1,0 +1,45 @@
+# Prevent access to the config ini file.
+<files flow_config.ini>
+	order allow,deny
+	deny from all
+</files>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+	# If you're not running this from the root of localhost or your local domain,
+	# then you'll need to change the RewriteBase to include the relative path
+	# to where Flow Storage is running from.
+	#
+	# For example, if you're running it out of a "flow" folder off localhost,
+	# you'd change this line to be:
+	#
+	# RewriteBase /flow/
+	#
+    RewriteBase /
+
+    #Checks to see if the user is attempting to access a valid file,
+    #such as an image or css document, if this isn't true it sends the
+    #request to index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L]
+	# This rule takes an empty, raw domain and passes it to the CI main controller
+	RewriteRule ^$ index.php [L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    # If we don't have mod_rewrite installed, all 404's
+    # can be sent to index.php, and everything works as normal.
+
+	# If you're not running this from the root of localhost or your local domain,
+	# then you'll need to change the ErrorDocument path to include the relative path
+	# to where Flow Storage is running from.
+	#
+	# For example, if you're running it out of a "flow" folder off localhost,
+	# you'd change this line to be:
+	#
+	# ErrorDocument 404 /flow/index.php
+	#
+    ErrorDocument 404 /index.php
+</IfModule>
