@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flex-config xmlns="http://www.adobe.com/2006/flex-config">
+    <target-player>10.1.0</target-player>
+	<default-frame-rate>60</default-frame-rate>
+	<default-background-color>0xCCCCCC</default-background-color>
+	<compiler>
+		<!--
+			Define the external library folders (these must contain raw ActionScript source code)
+		-->
+		<source-path append="true">
+			<!-- tuio-as3-lib Library -->
+			<path-element>../src_tuio-as3-lib</path-element>
+		</source-path>
+		
+		<!--
+			Define the external SWCs to be used at compile-time.
+		-->
+		<library-path append="true">
+			<!-- CASA Lib 1.3.0 -->
+			<path-element>../lib/CasaLib_1.3.0.swc</path-element>
+			<!-- Greensock Tweening Platform-->
+			<path-element>../lib/greensock.swc</path-element>
+			<!-- bit-101 Minimal Components Library -->
+			<path-element>../lib/MinimalComps.swc</path-element>
+		</library-path>
+		
+		<verbose-stacktraces>true</verbose-stacktraces>
+	</compiler>
+	<use-network>true</use-network>
+</flex-config>

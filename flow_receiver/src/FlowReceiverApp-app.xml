@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><application xmlns="http://ns.adobe.com/air/application/2.0" minimumPatchLevel="0">
+<!-- AIR Application Descriptor File. See http://www.adobe.com/go/learn_air_1.0_application_descriptor_en. -->
+	<id>com.mikecreighton.flow.FlowReceiver</id>
+	<name>Flow Receiver</name>
+	<version>2.0.1</version>
+	<filename>Flow Receiver</filename>
+	<description>
+		<text xml:lang="en">Flow Receiver is one component of the open source Flow Suite. This application sends and retrieves data to and from the Flow Storage application and provides users with a GUI for managing Flow projects.</text>
+	</description>
+	<copyright>Copyright 2010, Michael Creighton.</copyright>
+	<initialWindow>
+		<content>FlowReceiverApp.swf</content>
+		<title>Flow Receiver</title>
+		<systemChrome>standard</systemChrome>
+		<transparent>false</transparent>
+		<visible>false</visible>
+		<minimizable>true</minimizable>
+		<maximizable>false</maximizable>
+		<resizable>false</resizable>
+		<width>400</width>
+		<height>600</height>
+		<x>150</x>
+		<y>150</y>
+	</initialWindow>
+	<!-- <installFolder></installFolder> -->
+	<programMenuFolder>Flow</programMenuFolder>
+	
+	<customUpdateUI>false</customUpdateUI>
+	<allowBrowserInvocation>false</allowBrowserInvocation>
+	<!--
+	<fileTypes>
+		<fileType>
+			<name>com.example</name>
+			<extension>xmpl</extension>
+			<description>Example file</description>
+			<contentType>example/x-data-type</contentType>
+		</fileType>
+	</fileTypes>
+	 -->
+	<icon>
+		<image16x16>assets/icons/flowreceiver_16.png</image16x16>
+		<image32x32>assets/icons/flowreceiver_32.png</image32x32>
+		<image48x48>assets/icons/flowreceiver_48.png</image48x48>
+		<image128x128>assets/icons/flowreceiver_128.png</image128x128>
+	</icon>
+</application>

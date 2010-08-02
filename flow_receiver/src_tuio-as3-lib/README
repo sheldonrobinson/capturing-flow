@@ -1,0 +1,7 @@
+This source package combines two open source projects from tranxete:
+
+flosc @ http://code.google.com/p/flosc/
+
+tuio-as3-lib @ http://code.google.com/p/tuio-as3-lib/
+
+The source has been modified by Mike Creighton to take advantage of CASA Lib AS3's API and implement some proper garbage handling.
