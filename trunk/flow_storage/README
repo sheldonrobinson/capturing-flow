@@ -1,0 +1,120 @@
+=======================================================================
+        _                                             
+   /)  //  _,_    ,_     ,   -/- _,_ ,_  __,   __   _ 
+ _//__(/__(_/_/_/_/    _/_)__/__(_/_/ (_(_/(__(_/__(/_
+_/                                            _/_     
+/)                                           (/       
+`
+=======================================================================
+
+Flow Storage
+1.0.0
+
+=======================================================================
+Overview
+-----------------------------------------------------------------------
+
+Flow Storage is a web application built on top of CodeIgniter
+(http://www.codeigniter.com). It can be installed locally on your
+system (recommended) or on a public web server.
+
+
+Basic Requirements
+
+- Apache 2+
+- MySQL 5+
+- PHP 5+
+
+I highly recommend using XAMPP (http://www.apachefriends.org), which
+is an Apache, MySQL, PHP distribution for Mac and Windows that's easy
+to install and free to use.
+
+
+=======================================================================
+Getting Started
+-----------------------------------------------------------------------
+
+Assuming you're running this on your local machine, which is running
+an Apache web server with PHP and MySQL, you'll want to put the "www"
+folder into your localhost's root folder (wherever your Apache 
+installation is configured to see your htdocs root) or create a virtual
+domain that points to this "www" folder. If you did the former (with
+localhost), rename the "www" folder to something like "flow".
+
+From this point forward, when I refer to this folder, I'll refer to
+it as the "app root" folder.
+
+
+
+=======================================================================
+Create your database
+-----------------------------------------------------------------------
+
+This is something you'll need to do yourself, using a tool like
+PHPMyAdmin or the MySQL command line client. Either way, you'll need to
+create a MySQL database, using a "utf8" character set with a collation
+of "utf8_general_ci". Make sure you jot down the following info:
+
+- Hostname of the database (usually localhost)
+- Database name
+- Username
+- Password
+
+
+=======================================================================
+Configuring the .htaccess file
+-----------------------------------------------------------------------
+
+Next, you'll want to edit the htaccess.txt file in the app root folder.
+If you're having a virtual domain point to your app root folder, then
+you don't need to edit anything.
+
+If you're serving the application from a subdirectory from your
+localhost's root htdocs folder, then you'll need to modify the
+RewriteBase line and the ErrorDocument line near the bottom. Please
+refer to the comments in that file for tips on editing those lines.
+
+Finally, save the file and _rename_ the file to .htaccess. Don't
+forget that period at the beginning.
+
+
+=======================================================================
+Editing the flow_config.ini file
+-----------------------------------------------------------------------
+
+In the app root folder, edit the flow_config.ini file.
+
+For the base_url line, edit this URL to reflect the location of your
+app root folder. If you're running it as a subdirectory off the
+localhost root htdocs folder, you might change it to something like:
+
+     http://localhost/flow/
+
+Just make sure there's a trailing slash at the end!
+
+For the database section of the config INI, fill in the information
+about your database that you created earlier.
+
+Save your file and close it.
+
+
+=======================================================================
+Seeing if it works
+-----------------------------------------------------------------------
+
+Now you should be able to load up Flow Storage in your web browser.
+Point your browser to the app root folder (this might be your virtual)
+domain or the subdirectory under your localhost domain.
+
+You should see a welcome screen instructing you that you need to set
+up your database. Click the link to start the process of doing this,
+and just follow the steps. At the end, you should be told that the
+system is up and running properly and you should be presented with a
+link to view your Projects.
+
+If you've gotten this far, then you're ready to start using Flow
+Storage along with its companion application: Flow Receiver.
+
+
+=======================================================================
+
